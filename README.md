@@ -10,26 +10,29 @@ $ npm i sernam
 
 ## Usage
 
-**Import:**
-
-```javascript
-const sernam = require("sernam")
-```
-
-_or_
+**Import & Initialization in ES6:**
 
 ```javascript
 import sernam from "sernam"
-```
-
-**Initialization:**
-
-```javascript
 const options = {
   symbols: true,
   numbers: true,
 }
 const sn = sernam(options)
+```
+
+_or_
+
+**Import & Initialization in CommonJS:**
+
+```javascript
+import("sernam").then(({ default: sernam }) => {
+  const options = {
+    symbols: true,
+    numbers: true,
+  }
+  const sn = sernam(options)
+})
 ```
 
 ### `sernam(options)`
