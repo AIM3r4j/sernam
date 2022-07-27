@@ -1,6 +1,6 @@
 # Sernam
 
-Sernam is an Username Generator for Javascript or NodeJS. It generates single or multiple unique usernames from the name passed in as a parameter.
+Sernam is a Username Generator for Javascript or NodeJS. It generates single or multiple unique usernames from the name passed in as a parameter.
 
 ## Installation
 
