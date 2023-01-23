@@ -1,6 +1,6 @@
 {
   "name": "sernam",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "It generates single or multiple unique usernames from the name passed in as a parameter.",
   "main": "index.js",
   "type": "module",

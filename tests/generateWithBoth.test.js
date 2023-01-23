@@ -31,6 +31,12 @@ describe("Usernames with no symbols and numbers Test Suite", () => {
       const returned2 = sn.generateOne("Firstname Lastname")
       expect(returned2).toMatch(/^\S+$/)
     })
+    it("should return a string having no 'undefined' word", () => {
+      const returned1 = sn.generateOne("Fullname")
+      expect(returned1.includes('undefined')).toEqual(false)
+      const returned2 = sn.generateOne("Firstname Lastname")
+      expect(returned2.includes('undefined')).toEqual(false)
+    })
   })
 
   describe("Many Username Generation Test", () => {
@@ -44,6 +50,11 @@ describe("Usernames with no symbols and numbers Test Suite", () => {
       expect(returned1).toBeInstanceOf(Array)
       expect(returned1.length).toBe(5)
       expect(returned1.every((i) => typeof i === "string")).toBe(true)
+    })
+    it("should return an array of strings having no 'undefined' word", () => {
+      const returned1 = sn.generateMany("Firstname Middlename Lastname", 5)
+      expect(returned1).toBeInstanceOf(Array)
+      expect(returned1.some(username => username.includes('undefined'))).toEqual(false)
     })
   })
 })
